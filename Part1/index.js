@@ -25,27 +25,35 @@ function play(clickedId) {
     
     if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight) {
         alert(`The winner is Player ${topLeft}!`)
+        return
     }
     if (centerLeft !== undefined && centerLeft === centerCenter && centerLeft === centerRight) {
         alert(`The winner is Player ${centerLeft}!`)
+        return
     }
     if (bottomLeft !== undefined && bottomLeft === bottomCenter && bottomLeft === bottomRight) {
         alert(`The winner is Player ${bottomLeft}!`)
+        return
     }
     if (topLeft !== undefined && topLeft === centerLeft && topLeft === bottomLeft) {
         alert(`The winner is Player ${topLeft}!`)
+        return
     }
     if (topCenter !== undefined && topCenter === centerCenter && topCenter === bottomCenter) {
         alert(`The winner is Player ${topCenter}!`)
+        return
     }
     if (topRight !== undefined && topRight === centerRight && topRight === bottomRight) {
         alert(`The winner is Player ${topRight}!`)
+        return
     }
     if (topLeft !== undefined && topLeft === centerCenter && topLeft === bottomRight) {
         alert(`The winner is Player ${topLeft}!`)
+        return
     }
     if (topRight !== undefined && topRight === centerCenter && topRight === bottomLeft) {
         alert(`The winner is Player ${topRight}!`)
+        return
     }
 
     let boardFull = true
