@@ -4,14 +4,16 @@ function play(clickedId) {
     let  clickedElement = document.getElementById(clickedId)
     let playerSpan = document.getElementById('player')
 
-    if (playerSpan.innerText === 'X') {
-        playerSpan.innerText = 'O'
-        clickedElement.innerText = 'X'
-        board[clickedId] = 'X'
-    } else {
-        playerSpan.innerText = 'X'
-        clickedElement.innerText = 'O'
-        board[clickedId] = 'O'
+    if (clickedElement.innerText === '') {
+        if (playerSpan.innerText === 'X') {
+            playerSpan.innerText = 'O'
+            clickedElement.innerText = 'X'
+            board[clickedId] = 'X'
+        } else if (playerSpan.innerText === 'O') {
+            playerSpan.innerText = 'X'
+            clickedElement.innerText = 'O'
+            board[clickedId] = 'O'
+        }
     }
     let topLeft = board[0]
     let topCenter = board[1]
