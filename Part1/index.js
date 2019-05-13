@@ -67,3 +67,13 @@ function play(clickedId) {
     }
 }
 
+function reset() {
+   let boxes = document.getElementsByTagName('td')
+   
+   for (let i = 0; i < boxes.length; i++) {
+       boxes[i].innerText = ''
+   }
+   board = []
+   console.log(boxes)
+   console.log(board)
+}
