@@ -71,16 +71,18 @@ function play(clickedId) {
 
 function reset() {
    let boxes = document.getElementsByTagName('td')
-   
+   board = []
    for (let i = 0; i < boxes.length; i++) {
        boxes[i].innerText = ''
+       boxes[i].setAttribute('onclick', 'play(' + i + ')')
+       console.log(boxes[i]['onclick'])
    }
-   board = []
 }
 
 function stopGame() {
     let end = document.getElementsByTagName('td')
         for (let i = 0; i < end.length; i++) {
             end[i]['onclick'] = ''
+            console.log(end[i]['onclick'])
         }
 }
