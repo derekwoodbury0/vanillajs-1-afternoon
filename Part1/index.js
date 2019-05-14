@@ -27,35 +27,35 @@ function play(clickedId) {
     
     if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight) {
         alert(`The winner is Player ${topLeft}!`)
-        return
+        return stopGame()
     }
     if (centerLeft !== undefined && centerLeft === centerCenter && centerLeft === centerRight) {
         alert(`The winner is Player ${centerLeft}!`)
-        return
+        return stopGame()
     }
     if (bottomLeft !== undefined && bottomLeft === bottomCenter && bottomLeft === bottomRight) {
         alert(`The winner is Player ${bottomLeft}!`)
-        return
+        return stopGame()
     }
     if (topLeft !== undefined && topLeft === centerLeft && topLeft === bottomLeft) {
         alert(`The winner is Player ${topLeft}!`)
-        return
+        return stopGame()
     }
     if (topCenter !== undefined && topCenter === centerCenter && topCenter === bottomCenter) {
         alert(`The winner is Player ${topCenter}!`)
-        return
+        return stopGame()
     }
     if (topRight !== undefined && topRight === centerRight && topRight === bottomRight) {
         alert(`The winner is Player ${topRight}!`)
-        return
+        return stopGame()
     }
     if (topLeft !== undefined && topLeft === centerCenter && topLeft === bottomRight) {
         alert(`The winner is Player ${topLeft}!`)
-        return
+        return stopGame()
     }
     if (topRight !== undefined && topRight === centerCenter && topRight === bottomLeft) {
         alert(`The winner is Player ${topRight}!`)
-        return
+        return stopGame()
     }
 
     let boardFull = true
@@ -76,6 +76,11 @@ function reset() {
        boxes[i].innerText = ''
    }
    board = []
-   console.log(boxes)
-   console.log(board)
+}
+
+function stopGame() {
+    let end = document.getElementsByTagName('td')
+        for (let i = 0; i < end.length; i++) {
+            end[i]['onclick'] = ''
+        }
 }
